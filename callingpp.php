@@ -48,7 +48,7 @@
     <!-- Top Call Header -->
     <header class="p-4 sm:p-6 flex items-center justify-between z-20">
         <div class="flex items-center gap-3">
-            <a href="chatt.php" class="p-2.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition" title="Back to Chat">
+            <a href="singinconnection.php" class="p-2.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition" title="Back to Dashboard">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
                     <polyline points="12 19 5 12 12 5"></polyline>
@@ -64,9 +64,13 @@
         </div>
 
         <div class="flex items-center gap-3">
-            <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/10 backdrop-blur-md text-slate-200 border border-white/10">
-                1080p HD
-            </span>
+            <a href="singinconnection.php" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition text-xs font-semibold flex items-center gap-1.5 border border-white/10">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Back to Dashboard</span>
+            </a>
         </div>
     </header>
 

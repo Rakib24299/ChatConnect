@@ -31,7 +31,7 @@ $sql = "SELECT * FROM users WHERE id != '$userId' ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -46,63 +46,53 @@ $result = $conn->query($sql);
                 extend: {
                     colors: {
                         primary: {
-                            DEFAULT: '#4171e0',
-                            50: '#f2f6fe',
-                            100: '#e4edfd',
-                            200: '#ccdcfa',
-                            300: '#a5c3f6',
-                            400: '#75a1f0',
-                            500: '#4171e0',
-                            600: '#3056c7',
-                            700: '#2643a2',
-                            800: '#233983',
-                            900: '#21326c',
-                            950: '#141d43',
+                            DEFAULT: '#2563eb',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+<body class="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans">
 
     <!-- Navbar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-900/85 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <header class="bg-white dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20">
+            <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="singinconnection.php" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform duration-200">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="singinconnection.php" class="flex items-center gap-2">
+                    <div class="w-9 h-9 bg-blue-600 text-white flex items-center justify-center rounded-none font-bold">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                         </svg>
                     </div>
-                    <span class="text-2xl font-black tracking-tight text-primary">
+                    <span class="text-xl font-bold text-blue-600 dark:text-blue-400">
                         ChatConnect
                     </span>
                 </a>
 
                 <!-- Actions -->
-                <div class="flex items-center gap-3">
-                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition" title="Toggle Theme" aria-label="Toggle Theme">
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" class="p-2 border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-none" title="Toggle Theme">
                         <span id="theme-icon-container">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                             </svg>
                         </span>
                     </button>
-                    <a href="singinconnection.php" class="px-4 py-2.5 rounded-xl font-semibold text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition duration-200 text-xs sm:text-sm flex items-center gap-2">
+                    <a href="singinconnection.php" class="px-3 py-1.5 font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-600 text-xs sm:text-sm flex items-center gap-1.5 rounded-none">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="19" y1="12" x2="5" y2="12"></line>
                             <polyline points="12 19 5 12 12 5"></polyline>
@@ -115,28 +105,28 @@ $result = $conn->query($sql);
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow py-10 lg:py-14">
+    <main class="flex-grow py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Page Header Banner -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 bg-white dark:bg-slate-800 p-4 border border-slate-300 dark:border-slate-700 rounded-none">
                 <div>
-                    <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                        Discover & Add <span class="text-primary">Friends</span>
+                    <h1 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                        Discover & Add Friends
                     </h1>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">
-                        Connect with community members and expand your network.
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-0.5">
+                        Browse registered members and connect with friends.
                     </p>
                 </div>
-                <div class="flex items-center gap-3">
-                    <a href="viewfriend.php" class="px-5 py-2.5 rounded-xl font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm flex items-center gap-2">
-                        <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="flex items-center gap-2">
+                    <a href="viewfriend.php" class="px-3 py-2 font-semibold text-slate-700 dark:text-slate-200 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-xs rounded-none flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
                         </svg>
                         <span>My Friends List</span>
                     </a>
-                    <a href="viewaddfriend.php" class="px-5 py-2.5 rounded-xl font-semibold text-white bg-primary hover:bg-primary-600 shadow-md shadow-primary/20 transition text-sm flex items-center gap-2">
+                    <a href="viewaddfriend.php" class="px-3 py-2 font-semibold text-white bg-blue-600 hover:bg-blue-700 text-xs rounded-none flex items-center gap-1.5">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -147,7 +137,7 @@ $result = $conn->query($sql);
             </div>
 
             <!-- Members Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <?php if ($result && $result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <?php 
@@ -156,50 +146,43 @@ $result = $conn->query($sql);
                             if (empty($fullName)) $fullName = $row['email'];
                             $isAlreadyFriend = in_array($friendId, $existingFriends);
                         ?>
-                        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="w-14 h-14 rounded-2xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center font-bold text-xl shadow-inner shrink-0">
+                        <div class="p-4 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none flex flex-col justify-between">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-blue-100 dark:bg-slate-700 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-base rounded-none shrink-0">
                                     <?php echo strtoupper(substr($row['first_name'] ?? $row['email'], 0, 1)); ?>
                                 </div>
                                 <div class="overflow-hidden">
-                                    <h3 class="font-bold text-slate-900 dark:text-white text-base truncate">
+                                    <h3 class="font-bold text-slate-900 dark:text-white text-sm truncate">
                                         <?php echo htmlspecialchars($fullName); ?>
                                     </h3>
                                     <p class="text-xs text-slate-400 truncate">
                                         <?php echo htmlspecialchars($row['email']); ?>
                                     </p>
-                                    <span class="inline-block px-2.5 py-0.5 mt-1 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                                    <span class="inline-block px-1.5 py-0.2 mt-0.5 text-[10px] font-semibold bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-none">
                                         <?php echo htmlspecialchars(ucfirst($row['gender'] ?? 'Member')); ?>
                                     </span>
                                 </div>
                             </div>
 
-                            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                            <div class="pt-3 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
                                 <?php if ($isAlreadyFriend): ?>
-                                    <span class="px-4 py-2 rounded-xl text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="20 6 9 17 4 12"></polyline>
-                                        </svg>
-                                        <span>Friends</span>
+                                    <span class="px-2.5 py-1 text-xs font-bold text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-none">
+                                        Friends
                                     </span>
-                                    <a href="chatt.php" class="px-4 py-2 rounded-xl text-xs font-bold text-primary hover:bg-primary-50 dark:hover:bg-primary/10 transition">
+                                    <a href="chatt.php" class="px-3 py-1 text-xs font-bold text-blue-600 hover:underline">
                                         Chat
                                     </a>
                                 <?php else: ?>
-                                    <a href="addfriendprocess.php?friendId=<?php echo $friendId; ?>" class="w-full py-2.5 px-4 rounded-xl font-bold text-white bg-primary hover:bg-primary-600 shadow-sm transition flex items-center justify-center gap-2 text-xs">
-                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        </svg>
-                                        <span>Add Friend</span>
+                                    <a href="addfriendprocess.php?friendId=<?php echo $friendId; ?>" class="w-full py-1.5 px-3 font-bold text-white bg-blue-600 hover:bg-blue-700 text-center text-xs rounded-none">
+                                        Add Friend
                                     </a>
                                 <?php endif; ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <div class="col-span-full p-12 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800">
-                        <p class="text-slate-400 text-sm">No other registered users found to connect with.</p>
+                    <div class="col-span-full p-8 text-center bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <p class="text-slate-500 text-sm">No other registered users found.</p>
                     </div>
                 <?php endif; ?>
             </div>
@@ -208,20 +191,20 @@ $result = $conn->query($sql);
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/85 dark:bg-slate-900/85 border-t border-slate-200 dark:border-slate-800 transition-colors mt-auto">
+    <footer class="bg-white dark:bg-slate-800 border-t border-slate-300 dark:border-slate-700 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-20 py-4 sm:py-0 gap-3">
+            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 py-3 sm:py-0 gap-2">
                 <!-- Left: Copyright -->
                 <div class="text-center sm:text-left">
-                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
                         &copy; 2024 ChatConnect. All rights reserved.
                     </p>
                 </div>
 
                 <!-- Right: Developed by -->
                 <div class="text-center sm:text-right">
-                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">
-                        Developed by <span class="font-semibold text-slate-700 dark:text-slate-200">Rakib</span>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Developed by <span class="font-semibold text-slate-800 dark:text-slate-200">Rakib</span>
                     </p>
                 </div>
             </div>

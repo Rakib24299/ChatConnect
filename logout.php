@@ -2,10 +2,27 @@
 // Start the session
 session_start();
 
+// Unset all session variables
+$_SESSION = array();
+
+// Destroy the session cookie if present
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(
+        session_name(),
+        '',
+        time() - 42000,
+        $params["path"],
+        $params["domain"],
+        $params["secure"],
+        $params["httponly"]
+    );
+}
+
 // Destroy all session data
 session_destroy();
 
-// Redirect to the login page
-header("Location: signin.php");
-exit;
+// Redirect to the public index / home page
+header("Location: desh.php");
+exit();
 ?>

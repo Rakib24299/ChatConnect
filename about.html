@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,69 +14,59 @@
                 extend: {
                     colors: {
                         primary: {
-                            DEFAULT: '#4171e0',
-                            50: '#f2f6fe',
-                            100: '#e4edfd',
-                            200: '#ccdcfa',
-                            300: '#a5c3f6',
-                            400: '#75a1f0',
-                            500: '#4171e0',
-                            600: '#3056c7',
-                            700: '#2643a2',
-                            800: '#233983',
-                            900: '#21326c',
-                            950: '#141d43',
+                            DEFAULT: '#2563eb',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+<body class="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans">
 
     <!-- Navbar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-900/85 border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <header class="bg-white dark:bg-slate-800 border-b border-slate-300 dark:border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20">
+            <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="desh.php" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform duration-200">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="desh.php" class="flex items-center gap-2">
+                    <div class="w-9 h-9 bg-blue-600 text-white flex items-center justify-center rounded-none font-bold">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                         </svg>
                     </div>
-                    <span class="text-2xl font-black tracking-tight text-primary">
+                    <span class="text-xl font-bold text-blue-600 dark:text-blue-400">
                         ChatConnect
                     </span>
                 </a>
 
                 <!-- Desktop Nav Links -->
-                <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-                    <a href="desh.php" class="px-4 py-2 rounded-xl font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="desh.php" class="px-3 py-2 font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-white rounded-none">
                         Home
                     </a>
-                    <a href="about.html" class="px-4 py-2 rounded-xl font-semibold text-primary bg-primary-50 dark:bg-primary/10 transition">
+                    <a href="about.html" class="px-3 py-2 font-medium text-blue-600 bg-blue-50 dark:bg-slate-700 dark:text-blue-400 border border-blue-200 dark:border-slate-600 rounded-none">
                         About
                     </a>
-                    <a href="adminlogin.php" class="px-4 py-2 rounded-xl font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition">
+                    <a href="adminlogin.php" class="px-3 py-2 font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-white rounded-none">
                         Admin
                     </a>
                 </nav>
 
                 <!-- Action Buttons & Dark Mode Toggle -->
                 <div class="hidden md:flex items-center gap-3">
-                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition" title="Toggle Theme" aria-label="Toggle Theme">
+                    <button onclick="toggleDarkMode()" class="p-2 border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-none" title="Toggle Theme">
                         <span id="theme-icon-container">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -84,24 +74,24 @@
                         </span>
                     </button>
 
-                    <a href="singin.php" class="px-5 py-2.5 rounded-xl font-semibold text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <a href="singin.php" class="px-4 py-2 font-medium border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-none">
                         Sign In
                     </a>
-                    <a href="singup.php" class="px-5 py-2.5 rounded-xl font-semibold text-white bg-primary hover:bg-primary-600 shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 hover:-translate-y-0.5 transition duration-200">
+                    <a href="singup.php" class="px-4 py-2 font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-none">
                         Sign Up Free
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center gap-2 md:hidden">
-                    <button onclick="toggleDarkMode()" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <button onclick="toggleDarkMode()" class="p-2 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 rounded-none">
                         <span id="theme-icon-mobile-container">
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                             </svg>
                         </span>
                     </button>
-                    <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition">
+                    <button onclick="toggleMobileMenu()" class="p-2 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 rounded-none">
                         <span id="menu-icon-container">
                             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -114,246 +104,168 @@
             </div>
 
             <!-- Mobile Navigation Drawer -->
-            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
-                <a href="desh.php" class="block px-4 py-2.5 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
-                <a href="about.html" class="block px-4 py-2.5 rounded-lg font-semibold text-primary bg-primary-50 dark:bg-primary/10">About</a>
-                <a href="adminlogin.php" class="block px-4 py-2.5 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">Admin</a>
-                <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
-                    <a href="singin.php" class="text-center w-full py-2.5 rounded-xl font-semibold border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200">Sign In</a>
-                    <a href="singup.php" class="text-center w-full py-2.5 rounded-xl font-semibold text-white bg-primary hover:bg-primary-600">Sign Up Free</a>
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-slate-300 dark:border-slate-700 space-y-2">
+                <a href="desh.php" class="block px-3 py-2 font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-none">Home</a>
+                <a href="about.html" class="block px-3 py-2 font-semibold text-blue-600 bg-blue-50 dark:bg-slate-700 dark:text-blue-400 rounded-none">About</a>
+                <a href="adminlogin.php" class="block px-3 py-2 font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-none">Admin</a>
+                <div class="pt-3 border-t border-slate-300 dark:border-slate-700 flex flex-col gap-2">
+                    <a href="singin.php" class="text-center w-full py-2 font-medium border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-none">Sign In</a>
+                    <a href="singup.php" class="text-center w-full py-2 font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-none">Sign Up Free</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow py-12 lg:py-16">
+    <main class="flex-grow py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Page Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-primary bg-primary-50 dark:bg-primary/10 border border-primary/20 mb-4">
-                    <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="16" x2="12" y2="12"></line>
-                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                    </svg>
-                    <span>Platform Overview</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                    About <span class="text-primary">ChatConnect</span>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h1 class="text-3xl font-bold text-slate-900 dark:text-white">
+                    About ChatConnect
                 </h1>
-                <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-                    Discover how ChatConnect simplifies communication, connects people, and provides a powerful messaging experience.
+                <p class="mt-2 text-base text-slate-600 dark:text-slate-400">
+                    A simple communication platform built with PHP and MySQL.
                 </p>
             </div>
 
             <!-- Two Column Overview Card -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch mb-10">
                 <!-- Text Details -->
-                <div class="bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-xl shadow-slate-200/40 dark:shadow-none space-y-6">
-                    <div class="space-y-3">
-                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </span>
+                <div class="bg-white dark:bg-slate-800 p-6 border border-slate-300 dark:border-slate-700 rounded-none space-y-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                             What is ChatConnect?
                         </h2>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
-                            ChatConnect is an interactive messaging and community platform built to enable seamless communication across friends, colleagues, and groups. It provides rich text messaging, multimedia file sharing, voice & video calling, and structured database management.
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            ChatConnect is a PHP & MySQL web application designed to enable messaging, member exploration, friend requests, and call stages between users in a unified dashboard.
                         </p>
                     </div>
 
-                    <div class="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </span>
-                            Our Mission & Purpose
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-700">
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            Project Objectives
                         </h2>
-                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
-                            The primary goal of ChatConnect is to provide an intuitive, high-speed, and secure platform where users can easily connect with people globally, manage their profiles, discover new friends, and share memories effortlessly.
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            To implement a simple and functional social messaging system featuring secure user authentication, message exchange, friend network management, and administrative oversight.
                         </p>
                     </div>
                 </div>
 
                 <!-- Feature Highlights Side Card -->
-                <div class="bg-gradient-to-br from-primary via-primary-600 to-primary-700 text-white p-8 sm:p-10 rounded-3xl shadow-xl shadow-primary/25 space-y-6">
-                    <h3 class="text-2xl font-bold tracking-tight">Why Choose ChatConnect?</h3>
-                    <p class="text-primary-100 text-sm sm:text-base leading-relaxed">
-                        Designed with modern web standards to ensure smooth performance across mobile devices, tablets, and desktops.
-                    </p>
-                    
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span class="text-sm font-medium text-white">Instant real-time messaging with instant updates</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span class="text-sm font-medium text-white">High-fidelity voice and video calling interface</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span class="text-sm font-medium text-white">Fast image & media attachment support</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span class="text-sm font-medium text-white">Centralized admin management & member controls</span>
-                        </div>
+                <div class="bg-blue-600 text-white p-6 border border-blue-700 rounded-none space-y-4 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Core System Features</h3>
+                        <p class="text-blue-100 text-sm mb-4">
+                            Straightforward architecture and modules designed for clean execution.
+                        </p>
+                        
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2">
+                                <span class="font-bold">•</span>
+                                <span>Real-time text chat messaging system</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="font-bold">•</span>
+                                <span>Voice and video call simulation stage</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="font-bold">•</span>
+                                <span>Friend discovery and mutual connections</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="font-bold">•</span>
+                                <span>Admin panel for member management & search</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="pt-4">
-                        <a href="singup.php" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold bg-white text-primary hover:bg-slate-100 shadow-md transition duration-200">
-                            <span>Join ChatConnect Now</span>
-                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
+                    <div class="pt-4 border-t border-blue-500">
+                        <a href="singup.php" class="inline-block px-5 py-2.5 font-bold bg-white text-blue-600 hover:bg-slate-100 rounded-none">
+                            Create Account
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Key Features Grid -->
-            <div class="mb-16">
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-                        Key Features & Capabilities
+            <div>
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                        Module Overview
                     </h2>
-                    <p class="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                        Packed with all essential features required for social communication.
-                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Feature Card 1 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Text Messaging</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Send and receive instant text messages smoothly to your friends and network contacts.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Text Messaging</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Send and receive instant text messages smoothly to your friends with automatic log updates.
                         </p>
                     </div>
 
                     <!-- Feature Card 2 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Voice & Video Calls</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Experience clear voice and video call interfaces to connect face-to-face anytime.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Calling Stage</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Dedicated video and voice calling interface to test real-time session connections.
                         </p>
                     </div>
 
                     <!-- Feature Card 3 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="12" y1="18" x2="12" y2="12"></line>
-                                <line x1="9" y1="15" x2="15" y2="15"></line>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">File & Photo Sharing</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Share photos, attachments, and files effortlessly with built-in preview tools.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Friend Network</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Search for members, add them as friends, and view mutual friends.
                         </p>
                     </div>
 
                     <!-- Feature Card 4 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Friend Network</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Search members, add new friends, and explore mutual connections seamlessly.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. User Dashboard</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Central user hub with quick sidebar access to all primary communication features.
                         </p>
                     </div>
 
                     <!-- Feature Card 5 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Advertisements</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Integrated ads dashboard to manage promotional banners, pricing, and campaign media.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">5. Advertisements</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Publish and display community advertisements and promotional campaigns.
                         </p>
                     </div>
 
                     <!-- Feature Card 6 -->
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition">
-                        <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary/10 text-primary flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Secure Admin Control</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                            Dedicated administrative panel for managing users, monitoring database records, and system settings.
+                    <div class="p-5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-none">
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">6. Admin Control</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">
+                            Secure admin dashboard with member lookup, member table view, and statistics.
                         </p>
                     </div>
+                </div>
             </div>
 
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/85 dark:bg-slate-900/85 border-t border-slate-200 dark:border-slate-800 transition-colors mt-auto">
+    <footer class="bg-white dark:bg-slate-800 border-t border-slate-300 dark:border-slate-700 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-20 py-4 sm:py-0 gap-3">
+            <div class="flex flex-col sm:flex-row items-center justify-between h-auto sm:h-16 py-3 sm:py-0 gap-2">
                 <!-- Left: Copyright -->
                 <div class="text-center sm:text-left">
-                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
                         &copy; 2024 ChatConnect. All rights reserved.
                     </p>
                 </div>
 
                 <!-- Right: Developed by -->
                 <div class="text-center sm:text-right">
-                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">
-                        Developed by <span class="font-semibold text-slate-700 dark:text-slate-200">Rakib</span>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Developed by <span class="font-semibold text-slate-800 dark:text-slate-200">Rakib</span>
                     </p>
                 </div>
             </div>
